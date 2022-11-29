@@ -2,24 +2,43 @@
     <head>
         <title>Halaman Login Admin</title>
         <link rel="stylesheet" href="{{ asset('css/login_admin.css') }}">
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
         
     </head>
     <body>
     <div class="container">
-        <h3 style="text-align: center;">LOGIN</h3><br>
+        <h3 style="text-align: center;">Login Admin</h3><br>
             <form action="" method="post" class="login-email">
                 <ul style="list-style-type: none;">
                     <li>
                         <div class="input-group">
-                            <label for="username">Username</label><br>
-                            <input type="text" placeholder="username..." name="username" id="username" required><br>
+                            <input type="text" placeholder="Email" name="email" id="email" required><br>
                         </div>
                     </li>
                     <li>
                         <div class="input-group">
                             <br>
-                            <label for="password">Password</label><br>
-                           <input type="password" placeholder="password..." name="password" id="password" required><br>
+                           <input type="password" placeholder="Password" name="password" id="password" required><br>
                         </div>
                     </li>
                     <li>
