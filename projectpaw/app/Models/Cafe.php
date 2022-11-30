@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cafe extends Model
 {
-    use HasFactory;
+    public function menu(){
+        return $this->hasMany('App\Models\Menu', 'id_cafe', 'id_menu');
+    }
 }
