@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('home', 'v_home');
 Route::view('login', 'v_loginAdmin');
+Route::view('menu', 'v_menuAdmin');
