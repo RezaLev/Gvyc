@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('facilities', function (Blueprint $table) {
-            $table->bigIncrements('id_fasilitas');
-            $table->string('nama_fasilitas');
+        Schema::create('cafes', function (Blueprint $table) {
+            $table->id('id_cafe');
+            $table->string('nama_cafe');
+            $table->bigInteger('no_telepon');
+            $table->string('definisi_cafe');
+            $table->string('alamat_cafe');
+            $table->binary('foto_cafe');
         });
     }
 
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facilities');
+        Schema::dropIfExists('cafes');
     }
 };

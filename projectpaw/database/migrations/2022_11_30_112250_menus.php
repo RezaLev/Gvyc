@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('menus', function (Blueprint $table) {
-            $table->bigIncrements('id_menu');
-            $table->integer('id_cafe');
+            $table->id('id_menu');
+            $table->unsignedBigInteger('id_cafe');
+            $table->foreign('id_cafe')->references('id_cafe')->on('cafes');
             $table->string('nama_menu');
-            $table->integer('harga_menu');
-            $table->string('keterangan_menu');
+            $table->inte('harga_menu');
+            $table->binary('foto_menu');
         });
     }
 

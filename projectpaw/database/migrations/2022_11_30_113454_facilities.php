@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cafes', function (Blueprint $table) {
-            $table->bigIncrements('id_cafe');
-            $table->string('nama_cafe');
-            $table->string('noTelepon_cafe');
-            $table->string('deskripsi_cafe');
-            $table->string('alamat_cafe');
+        Schema::create('facilities', function (Blueprint $table) {
+            $table->id('id_fasilitas');
+            $table->string('nama_fasilitas');
+            $table->binary('foto_fasilitas');
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cafes');
+        Schema::dropIfExists('facilities');
     }
 };

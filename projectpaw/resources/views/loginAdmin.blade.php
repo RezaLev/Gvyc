@@ -17,27 +17,29 @@
                 <h3>Login Admin</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="input-group">
-                    <input type="text" placeholder="Email" name="email" id="email" required>
+        <form action="" method="POST">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <input type="email" placeholder="Email" name="email" id="email" required>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="input-group">
-                    <input type="password" placeholder="Password" name="password" id="password" required>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <input type="password" placeholder="Password" name="password" id="password" required>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="input-group">
-                <button type="submit" name="login" id="login" class="btn">Login</button>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <button type="submit" name="login" id="login" class="btn">Login</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
