@@ -13,12 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-// Route::get('/login', function () {
-//     return view('loginAdmin');
-// });
-
-Route::view('login', 'loginAdmin');
+Route::view('home', 'v_home');
+Route::view('login', 'v_loginAdmin');

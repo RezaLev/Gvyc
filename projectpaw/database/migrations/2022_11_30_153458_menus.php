@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cafes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('menus', function (Blueprint $table) {
+            $table->id('id_menu');
+            $table->unsignedBigInteger('id_cafe');
+            $table->foreign('id_cafe')->references('id_cafe')->on('cafes');
+            $table->string('nama_menu');
+            $table->integer('harga_menu');
+            $table->binary('foto_menu');
         });
     }
 
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cafes');
+        Schema::dropIfExists('menus');
     }
 };
