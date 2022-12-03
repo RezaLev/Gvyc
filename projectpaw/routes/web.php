@@ -13,7 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('home', 'v_home');
+Route::view('/', 'v_home');
 Route::view('login', 'v_loginAdmin');
-Route::view('menu', 'v_menuAdmin');
-Route::view('fasilitas', 'v_fasilitasAdmin');
+
+Route::prefix('admin')->group(function () {
+    Route::view('/', 'v_dashboardAdmin');
+    Route::view('menu', 'v_menuAdmin');
+    Route::view('fasilitas', 'v_fasilitasList');
+    Route::controller(OrderController::class)->group(function () {
+        Route::get('/orders/{id}', 'show');
+        Route::post('/orders', 'store');
+    });
+});
