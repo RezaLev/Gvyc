@@ -10,7 +10,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/menuAdmin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
 </head>
 
@@ -46,20 +46,20 @@
             <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data"
                 class="container-body">
                 @csrf
-                <div class="form-menu">
+                <div>
                     <h5 id="teks">Name</h5>
-                    <input type="text" class="form-namenu" name="nama_menu">
+                    <input type="text" class="form-input" name="nama_menu">
                 </div>
-                <div class="form-menu">
+                <div>
                     <h5 id="teks">Price</h5>
-                    <input type="number" class="form-primenu" name="harga_menu">
+                    <input type="number" class="form-input" name="harga_menu">
                 </div>
-                <div class="form-menu">
+                <div>
                     <h5 id="teks">Image</h5>
-                    <input type="file" class="form-imgmenu" placeholder="Drop files here to upload"
+                    <input type="file" class="form-input" placeholder="Drop files here to upload"
                         style="color: #B6BBBF;" name="foto_menu">
                 </div>
-                <button type="submit" class="btn-save-menu">Save</button>
+                <button type="submit" class="btn-save">Save</button>
             </form>
         </div>
     </div>
