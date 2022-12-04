@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\CafeController;
+use App\Http\Controllers\FacilitiesController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'v_home');
+Route::get('/',  [DashboardController::class, 'index']);
 Route::view('login', 'v_loginAdmin');
 
 Route::prefix('admin')->group(function () {
     Route::view('/', 'v_dashboardAdmin');
     Route::resource('menu', MenuController::class);
-    Route::view('fasilitas', 'v_fasilitasList');
+    Route::resource('cafe', CafeController::class);
+    Route::resource('facilities', FacilitiesController::class);
 });
