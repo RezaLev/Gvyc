@@ -22,11 +22,10 @@ class FacilitiesController extends Controller
     {
         $request->validate([
             'nama_fasilitas' => 'required',
-            'foto_fasilitas' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'foto_fasilitas' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-
-        $request->request->add(['foto_fasilitas' => $request->file('foto_fasilitas')->store('foto_fasilitas', 'public')]);
-
+        if ($request->file() != null) $request->request->add(['foto_fasilitas' => $request->file('foto_fasilitas')->store('foto_fasilitas', 'public')]);
+        else $request->request->add(['foto_fasilitas' => null]);
         Facilities::create($request->post());
 
         return redirect()->route('facilities.index')->with('success', 'Facilities has been created successfully.');

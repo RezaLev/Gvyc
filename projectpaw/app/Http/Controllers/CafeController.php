@@ -26,10 +26,10 @@ class CafeController extends Controller
             'no_telepon' => 'required',
             'definisi_cafe' => 'required',
             'alamat_cafe' => 'required',
-            'foto_cafe' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'foto_cafe' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-
-        $request->request->add(['foto_cafe' => $request->file('foto_cafe')->store('foto_cafe', 'public')]);
+        if ($request->file() != null) $request->request->add(['foto_cafe' => $request->file('foto_cafe')->store('foto_cafe', 'public')]);
+        else $request->request->add(['foto_cafe' => null]);
 
         Cafe::create($request->post());
 
@@ -48,7 +48,7 @@ class CafeController extends Controller
             'no_telepon' => 'required',
             'definisi_cafe' => 'required',
             'alamat_cafe' => 'required',
-            'foto_cafe' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'foto_cafe' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
         if ($cafe->foto_cafe != null && Storage::disk('public')->exists($cafe->foto_cafe)) Storage::disk('public')->delete($cafe->foto_cafe);

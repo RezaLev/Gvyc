@@ -23,10 +23,10 @@ class MenuController extends Controller
         $request->validate([
             'nama_menu' => 'required',
             'harga_menu' => 'required',
-            'foto_menu' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'foto_menu' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
-
-        $request->request->add(['foto_menu' => $request->file('foto_menu')->store('foto_menu', 'public')]);
+        if ($request->file() != null) $request->request->add(['foto_menu' => $request->file('foto_menu')->store('foto_menu', 'public')]);
+        else $request->request->add(['foto_fasilitas' => null]);
 
         Menu::create($request->post());
 
