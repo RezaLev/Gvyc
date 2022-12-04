@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cafe extends Model
 {
-    public function menu(){
-        return $this->hasMany('App\Models\Menu', 'id_cafe', 'id_menu');
-    }
+    protected $table = 'cafes';
+    protected $primaryKey = 'id_cafe';
+    public $timestamps = false;
+    protected $guarded = [];
+    public $incrementing = false;
 }

@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('cafes', function (Blueprint $table) {
             $table->id('id_cafe');
             $table->string('nama_cafe');
-            $table->bigInteger('no_telepon');
+            $table->string('no_telepon');
             $table->string('definisi_cafe');
             $table->string('alamat_cafe');
-            $table->binary('foto_cafe');
+            $table->string('foto_cafe');
         });
     }
 
