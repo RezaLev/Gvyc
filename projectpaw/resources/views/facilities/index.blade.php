@@ -40,7 +40,7 @@
 
     <div class="container-content">
         <div class="content-head d-flex justify-content-between">
-            <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Menu List</h4>
+            <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Facilities List</h4>
             <a href="{{ route('facilities.create') }}" class=" btn-go-back me-3 text-decoration-none">New</a>
         </div>
         <div class="content-body">
@@ -65,12 +65,14 @@
                             <td>{{ $m->nama_fasilitas }}</td>
                             <td>
                                 @if ($m->foto_fasilitas != null)
-                                    <img class="table-image rounded-pill" src="{{ asset('storage/' . $m->foto_fasilitas) }}">
+                                    <img class="table-image rounded-pill"
+                                        src="{{ asset('storage/' . $m->foto_fasilitas) }}">
                                 @endif
                             </td>
                             <td>
                                 <form action="{{ route('facilities.destroy', $m->id_fasilitas) }}" method="POST">
-                                    <a class="btn btn-primary" href="{{ route('facilities.edit', $m->id_fasilitas) }}">Edit</a>
+                                    <a class="btn btn-primary"
+                                        href="{{ route('facilities.edit', $m->id_fasilitas) }}">Edit</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>

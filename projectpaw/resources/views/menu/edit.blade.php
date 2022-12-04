@@ -47,20 +47,20 @@
                 class="container-body">
                 @csrf
                 @method('PUT')
-                <div class="form-menu">
+                <div>
                     <h5 id="teks">Name</h5>
-                    <input type="text" class="form-namenu" name="nama_menu" value="{{ $menu->nama_menu }}">
+                    <input type="text" class="form-input" name="nama_menu" value="{{ $menu->nama_menu }}">
                 </div>
-                <div class="form-menu">
+                <div>
                     <h5 id="teks">Price</h5>
-                    <input type="number" class="form-primenu" name="harga_menu" value="{{ $menu->harga_menu }}">
+                    <input type="number" class="form-input" name="harga_menu" value="{{ $menu->harga_menu }}">
                 </div>
-                <div class="form-menu">
+                <div>
                     <h5 id="teks">Image</h5>
-                    <input type="file" class="form-imgmenu" placeholder="Drop files here to upload"
+                    <input type="file" class="form-input" placeholder="Drop files here to upload"
                         style="color: #B6BBBF;" name="foto_menu" value="{{ $menu->foto_menu }}">
                 </div>
-                <button type="submit" class="btn-save-menu">Save</button>
+                <button type="submit" class="btn-save">Save</button>
             </form>
         </div>
     </div>
