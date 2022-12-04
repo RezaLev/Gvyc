@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('facilities', function (Blueprint $table) {
             $table->id('id_fasilitas');
             $table->string('nama_fasilitas');
-            $table->binary('foto_fasilitas');
+            $table->string('foto_fasilitas');
         });
     }
 
