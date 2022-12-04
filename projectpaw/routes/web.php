@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,10 +19,6 @@ Route::view('login', 'v_loginAdmin');
 
 Route::prefix('admin')->group(function () {
     Route::view('/', 'v_dashboardAdmin');
-    Route::view('menu', 'v_menuAdmin');
+    Route::resource('menu', MenuController::class);
     Route::view('fasilitas', 'v_fasilitasList');
-    Route::controller(OrderController::class)->group(function () {
-        Route::get('/orders/{id}', 'show');
-        Route::post('/orders', 'store');
-    });
 });

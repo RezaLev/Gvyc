@@ -37,12 +37,19 @@
             <button type="submit" id="user" class="fas fa-user">
         </div>
     </nav>
+
     <div class="container-content">
-        <div class="content-head">
+        <div class="content-head d-flex justify-content-between">
             <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Menu List</h4>
+            <a href="{{ route('menu.create') }}" class=" btn-go-back me-3 text-decoration-none">New</a>
         </div>
         <div class="content-body">
             <div class="container-body">
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
                 <table border="1">
                     <tr>
                         <td>No</td>
@@ -52,16 +59,30 @@
                         <td>Action</td>
                     </tr>
 
-                    <tr>
-                        <td>1</td>
-                        <td>Chocolate</td>
-                        <td>20.000</td>
-                        <td><img src="</td>
-                            <td>Action</td>
+                    @foreach ($menus as $m)
+                        <tr>
+                            <td>{{ $loop->index + 1 }}</td>
+                            <td>{{ $m->nama_menu }}</td>
+                            <td>{{ $m->harga_menu }}</td>
+                            <td>
+                                @if ($m->foto_menu != null)
+                                    <img class="table-image rounded-pill" src="{{ asset('storage/' . $m->foto_menu) }}">
+                                @endif
+                            </td>
+                            <td>
+                                <form action="{{ route('menu.destroy', $m->id_menu) }}" method="POST">
+                                    <a class="btn btn-primary" href="{{ route('menu.edit', $m->id_menu) }}">Edit</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
                         </tr>
-                        </table>
-                </div>
+                    @endforeach
+                </table>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
