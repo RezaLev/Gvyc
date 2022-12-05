@@ -1,18 +1,18 @@
 @extends('layout')
 @section('content')
-    <div class="container-content">
-        <div class="content-head d-flex justify-content-between">
-            <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Cafe List</h4>
-            <a href="{{ route('cafe.create') }}" class=" btn-go-back me-3 text-decoration-none">New</a>
-        </div>
-        <div class="content-body">
-            <div class="container-body">
-                @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <p class="m-0">{{ $message }}</p>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
+    <div class="content-head d-flex justify-content-between">
+        <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Cafe List</h4>
+        <a href="{{ route('cafe.create') }}" class=" btn-go-back me-3 text-decoration-none">New</a>
+    </div>
+    <div class="content-body">
+        <div class="container-body">
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <p class="m-0">{{ $message }}</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <div class="table-responsive">
                 <table border="1">
                     <tr>
                         <td>No</td>

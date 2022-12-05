@@ -16,48 +16,66 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <header>HOMEPAGE</header>
-        <a href="/admin" class="text-decoration-none">
-            <div class="btn-side">
-                <div class="dashboard">
-                    <button class="sidebarBtn">
-                        <i class="fas fa-dashboard"></i>
-                        Dashboard</button>
-                </div>
-        </a>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <button class="sidebarBtn py-3 d-flex justify-content-between w-100" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
-                    <span>
-                        <i class="fas fa-gear"></i>
-                        Product
-                    </span>
-                    <i class="fas fa-stream align-self-center"></i>
-                </button>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body m-3">
-                        <a class="text-dark text-decoration-none" href="/admin/menu">Menu</a> <br>
-                        <a class="text-dark text-decoration-none" href="/admin/cafe">Cafe</a> <br>
-                        <a class="text-dark text-decoration-none" href="/admin/facilities">Facilities</a><br>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-0" style="background: var(--main)">
+                <div
+                    class="d-flex flex-column align-items-center justify-content-center p-0 align-items-sm-start text-white min-vh-100">
+                    <div class="bg-white w-100 text-center">
+                        <br>
+                        <a class="navbar-brand" href="https://imgbb.com/"><img
+                                src="https://i.ibb.co/10VsgHS/Logopaw.png" alt="Logopaw"></a>
+                        <br>
+                        <br>
                     </div>
+                    <br>
+                    <br>
+                    <ul class="nav nav-pills w-100 px-4 flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item w-100 mb-1">
+                            <a href="/admin" class="text-decoration-none w-100 border-0 text-dark sidebarBtn"
+                                style="background: var(--main)">
+                                <i class="fas fa-dashboard"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item" style="background: transparent; border: none">
+                                    <button class="sidebarBtn border-0  py-3 d-flex justify-content-between w-100"
+                                        style="background: var(--main)" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true">
+                                        <span>
+                                            <i class="fas fa-gear"></i>
+                                            Product
+                                        </span>
+                                        <i class="fas fa-stream align-self-center"></i>
+                                    </button>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body bg-white rounded-3">
+                                            <a class="text-dark text-decoration-none" href="/admin/menu">Menu</a> <br>
+                                            <a class="text-dark text-decoration-none" href="/admin/cafe">Cafe</a> <br>
+                                            <a class="text-dark text-decoration-none"
+                                                href="/admin/facilities">Facilities</a><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <a href="{{ route('logout') }}" class="text-decoration-none text-white ms-4 sidebarBtn mb-5"><i
+                            class="fas fa-arrow-left text-white"></i> Logout</a>
+
                 </div>
+            </div>
+            <div class="col py-3">
+                @yield('content')
             </div>
         </div>
     </div>
-    </div>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="https://imgbb.com/"><img src="https://i.ibb.co/10VsgHS/Logopaw.png"
-                alt="Logopaw"></a>
-        <div class="navbar-admin">
-            <button type="submit" class="btn-admin" href="#">Admin</button>
-            <button type="submit" id="user" class="fas fa-user">
-                <a href="{{ route('logout') }}">Logout</a>
-        </div>
-    </nav>
-    @yield('content')
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
