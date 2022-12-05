@@ -36,6 +36,7 @@
         <div class="navbar-admin">
             <button type="submit" class="btn-admin" href="#">Admin</button>
             <button type="submit" id="user" class="fas fa-user">
+                <a href="{{route('logout')}}">Logout</a>
         </div>
     </nav>
     </div>

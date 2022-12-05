@@ -39,7 +39,7 @@
                     </li>
                 </ul>
                 <div class="navbar-login">
-                    <button type="submit" class="btn-login">LOGIN</button>
+                    <a href="{{ route('login') }}" class="btn-login py-2 px-5 fs-6  ">LOGIN</a>
                 </div>
             </div>
         </div>
