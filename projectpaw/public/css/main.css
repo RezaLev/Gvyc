@@ -225,3 +225,8 @@ tr {
 .table-image {
     width: 5em;
 }
+
+.sidebarBtn:hover {
+    transition: .7s;
+    padding-left: 50px;
+}
