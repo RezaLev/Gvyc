@@ -56,10 +56,6 @@ body {
     transition: .7s;
 }
 
-.btn-side button:hover a {
-    padding-left: 50px;
-}
-
 .sidebar btn-side a i {
     margin-right: 16px;
 }

@@ -81,7 +81,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="gelato">
-                                    <p>Gelato</p>
+                                    <p class="w-100">Gelato</p>
                                 </div>
                                 <div class="gelato-image">
                                     <a href="{{ url('/') }}">
@@ -104,7 +104,7 @@
             </div>
             <div class="row">
                 <div class="view-more">
-                    <a href="/all" class="btn-more text-decoration-none py-2 px-5">View More</a>
+                    <a href="/" class="btn-more text-decoration-none py-2 px-5">Hide</a>
                 </div>
             </div>
         </div>
@@ -155,7 +155,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="gelato">
-                                    <p>Gelato</p>
+                                    <p class="w-100">Gelato</p>
                                 </div>
                                 <div class="gelato-image">
                                     <a href="{{ url('/') }}">

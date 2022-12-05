@@ -18,32 +18,35 @@
 <body>
     <div class="sidebar">
         <header>HOMEPAGE</header>
-        <div class="btn-side">
-            <div class="dashboard">
-                <button class="sidebarBtn">
-                    <i class="fas fa-dashboard"></i></a>Dashboard</button>
-            </div>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <button class="sidebarBtn py-3 d-flex justify-content-between w-100" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
-                        <span>
-                            <i class="fas fa-gear"></i>
-                            Product
-                        </span>
-                        <i class="fas fa-stream align-self-center"></i>
-                    </button>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body m-3">
-                            <a class="text-dark text-decoration-none" href="/admin/menu">Menu</a> <br>
-                            <a class="text-dark text-decoration-none" href="/admin/cafe">Cafe</a> <br>
-                            <a class="text-dark text-decoration-none" href="/admin/facilities">Facilities</a><br>
-                        </div>
+        <a href="/admin" class="text-decoration-none">
+            <div class="btn-side">
+                <div class="dashboard">
+                    <button class="sidebarBtn">
+                        <i class="fas fa-dashboard"></i>
+                        Dashboard</button>
+                </div>
+        </a>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <button class="sidebarBtn py-3 d-flex justify-content-between w-100" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                    <span>
+                        <i class="fas fa-gear"></i>
+                        Product
+                    </span>
+                    <i class="fas fa-stream align-self-center"></i>
+                </button>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body m-3">
+                        <a class="text-dark text-decoration-none" href="/admin/menu">Menu</a> <br>
+                        <a class="text-dark text-decoration-none" href="/admin/cafe">Cafe</a> <br>
+                        <a class="text-dark text-decoration-none" href="/admin/facilities">Facilities</a><br>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="https://imgbb.com/"><img src="https://i.ibb.co/10VsgHS/Logopaw.png"

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',  [DashboardController::class, 'index']);
+Route::get('/all',  [DashboardController::class, 'all']);
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('tryLogin', [LoginController::class, 'tryLogin'])->name('tryLogin');
 
